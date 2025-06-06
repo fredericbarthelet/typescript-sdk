@@ -31,6 +31,7 @@ export class ReadBuffer {
 }
 
 export function deserializeMessage(line: string): JSONRPCMessage {
+  console.error("deserializeMessage line", line);
   return JSONRPCMessageSchema.parse(JSON.parse(line));
 }
 
